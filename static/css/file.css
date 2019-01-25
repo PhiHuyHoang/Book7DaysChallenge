@@ -1,0 +1,19 @@
+body {
+    font: normal 18px/27px menlo, monospace, sans-serif;
+    color: #777;
+    }
+.unicode-list li {
+    list-style: none; border-bottom: solid 1px #ccc;
+}
+.link-list li {
+    font: 300 16px/27px helvetica;
+}
+:before {
+    color: #A0002E; display: inline-block; font: normal 20px/20px helvetica; width: 30px;
+}
+
+
+.unicode-list
+{
+padding : 0px;
+}

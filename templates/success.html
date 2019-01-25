@@ -1,45 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rice Challenge</title>
-  
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300|Montserrat' rel='stylesheet' type='text/css'>
-
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+    <meta charset="UTF-8">
+    <title>Rice Challenge</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/file.css') }}">
 </head>
-
 <body>
- <div class="background"></div>
-<div class="container">
-	<div class="row">
-		<div class="modalbox success col-sm-8 col-md-6 col-lg-5 center animate">
-			<div class="icon">
-				<span class="glyphicon glyphicon-ok"></span>
-			</div>
-			<!--/.icon-->
-			<h1>Success!</h1>
-			<form method="post" enctype="multipart/form-data" id = "email-form" action="/">
-				<p>Your file is ready! Give me your email address! </p>
-				<input type="text" placeholder="Your email: " name="email">
-				<input name="file_name" value = "{{ file_name }}"  type="hidden">
-				<button type="submit">SEND</button>
-			</form>
-		</div>
-		<!--/.success-->
-	</div>
-	<!--/.row-->
-		<!--/.success-->
-	</div>
-	<!--/.row-->
-</div>
-<!--/.container-->
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-
+<p>Go to <a href="/">Upload</a> here.</p>
+<ul class="unicode-list">
+    {% for file in files %}
+    <li><a href="{{files}}/{{ file }}">{{ file }}</a></li>
+    {% endfor %}
+</ul>
 
 </body>
-
 </html>
