@@ -41,7 +41,9 @@ class cutterPDF():
         encoders.encode_base64(p)
         p.add_header('Content-Disposition', "attachment; filename= %s" % book_name)
         msg.attach(p)
-        s = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+        s = smtplib.SMTP('smtp.gmail.com', 587)
+        s.ehlo()
+        s.starttls()
         s.ehlo()
         s.login(fromaddr, password)
         text = msg
