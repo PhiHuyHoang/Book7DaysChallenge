@@ -18,7 +18,7 @@ def upload_file():
         try:
             for file in file_obj:
                 file_name = secure_filename(file.filename)
-                base_dir = file_name.replace(".pdf", "")
+                base_dir = "static/"+file_name.replace(".pdf", "")
                 if not os.path.exists(base_dir):
                     os.makedirs(base_dir)
                 file.save(os.path.join(base_dir, file_name))
