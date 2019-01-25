@@ -30,7 +30,7 @@ def upload_file():
                 for f in files:
                     ext = os.path.splitext(f)[-1].lower()
                     print(ext)
-                return render_template('success.html', files=files)
+                return render_template('success.html', files=files, base_dir=base_dir)
         except Exception as e:
             print(e)
             return render_template('error.html')

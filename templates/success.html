@@ -9,7 +9,7 @@
 <p>Go to <a href="/">Upload</a> here.</p>
 <ul class="unicode-list">
     {% for file in files %}
-    <li><a href="{{files}}/{{ file }}">{{ file }}</a></li>
+    <li><a href="{{base_dir}}/{{ file }}">{{ file }}</a></li>
     {% endfor %}
 </ul>
 
